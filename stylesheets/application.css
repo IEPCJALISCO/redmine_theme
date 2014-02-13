@@ -11,8 +11,8 @@ Based on: Modula Martini
 */
 
 /* Load the default Redmine stylesheet. */
-@import url("http://fonts.googleapis.com/css?family=Duru+Sans");
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700");
+@import url("//fonts.googleapis.com/css?family=Duru+Sans");
+@import url("//fonts.googleapis.com/css?family=Open+Sans:400,700");
 @import url("../../../stylesheets/application.css");
 
 body {
@@ -31,6 +31,12 @@ body {
     min-width: 900px;
     max-width: 1300px;
     margin: 0 auto;
+}
+
+#login-form table {
+    color: #333;
+    background: #ebcb8f;
+    border: none;
 }
 
 /* <TOP MENU> */
@@ -104,6 +110,16 @@ body {
     font-size: 1.5em;
     padding: 0 0.4em;
 }
+#header a {
+    color: #333;
+}
+#header .root {
+    font-size: 0.8em;
+}
+#header .ancestor {
+    font-size: 0.8em;
+    display: none;
+}
 #header #quick-search {
     display: block;
     position: absolute;
@@ -167,7 +183,30 @@ body {
     top: 0;
     left: 0;
 }
+.box fieldset {
+    position: relative;
+    padding-top: 1.5em;
+}
 
+.tabular .splitcontent {
+    width: 100%;
+}
+.tabular p {
+    padding-left: 150px;
+}
+.tabular select {
+    width: 85%;
+    max-width: 250px;
+}
+form .tabular .attributes select {
+    width: 85%;
+    max-width: 250px;
+}
+
+hr {
+    background: #000;
+    height: 1px;
+}
 
 #main {
     background: #333 url("../images/vertical_cloth.png");
@@ -212,6 +251,11 @@ a:hover, a:active {
 }
 
 
+.date_cf.hasDatepicker {
+    width: 120px;
+}
+
+
 /* Tables
 ---------------------------------------------------------------------------- */
 
@@ -244,6 +288,7 @@ table.list thead th {
 /* Align the checkboxes too in the issues table. */
 table.list td.checkbox {
     padding: 7px 10px 7px 3px;
+    word-wrap: break-word;
 }
 
 /* Accentuate more written human messages and deaccentuate systemmsg  */
@@ -263,6 +308,7 @@ div.issue div.subject h3 {
     font-size: 1em;
     margin-bottom: 3px;
 }
+
 /* A subtle difference in size between links and non-links in issue tables. */
 table.list tr.issue {
     font-size: 90%;
@@ -356,12 +402,9 @@ img.gravatar {
     bottom: 0;
     left: 0;
     opacity: 0.7;
-    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
-    filter: alpha(opacity=70);
-    background: #000;
-    color: #fff;
+    background: #fff;
+    color: #000;
 }
-
 #ajax-indicator span {
     display: block;
     position: absolute;
@@ -369,7 +412,7 @@ img.gravatar {
     left: 0;
     right: 0;
     text-align: center;
-    background: url(../images/loading.gif) top center no-repeat;
+    background: url(../images/logoIEPC.png) top center no-repeat;
     padding: 75px 0 0;
     font-size: 135%;
     text-shadow: 0 0 100px #fff;
