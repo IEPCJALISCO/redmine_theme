@@ -188,6 +188,21 @@ body {
     padding-top: 1.5em;
 }
 
+.tabular .splitcontent {
+    width: 100%;
+}
+.tabular p {
+    padding-left: 150px;
+}
+.tabular select {
+    width: 85%;
+    max-width: 250px;
+}
+form .tabular .attributes select {
+    width: 85%;
+    max-width: 250px;
+}
+
 hr {
     background: #000;
     height: 1px;
